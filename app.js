@@ -71,6 +71,7 @@ function insert() {
 }
 
 function save() {
+    var checkPasien = dataPasien.find((data) => data.id_pasien == id_pasien.value);
     if (id_pasien.value == "" || nama.value == "" || alamat.value == "" || penyakit.value == "" || ruang.value == "" || bpjs.value == "" || tgl_masuk.value == "") {
         alert("Masukkan Data Lengkap Pasien");
     } else if (checkPasien) {
